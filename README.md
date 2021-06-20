@@ -13,9 +13,9 @@ This site is deployed on GitHub Pages using the `Create React App docs` for depl
 GitHub Repository: [React_EmployeeDirectory](https://github.com/rdevans87/React_EmployeeDirectory)
 
 ## User Story
-
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
-
+```
+As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+```
 ## Business Context
 
 An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
@@ -24,7 +24,7 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
 
-The useris be able to:
+The user is be able to:
 
   * Sort the table by at least one category
 
@@ -35,6 +35,8 @@ The useris be able to:
   * `gh-pages` branch used to host the deployed application's code. 
 
 ## Installation/Usage
+
+`npx i create-react-app.js`
 
 `npm start` 
 Runs the app in the development mode.
@@ -50,6 +52,34 @@ Builds the app for production to the build folder.
 `npm run eject`
  This command will remove the single build dependency from your project.  
 
+
+
+## Resources 
+
+
+[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+[React documentation](https://reactjs.org/).
+
+[Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+[Analyzing the Bundle Size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+p
+
+This section has moved [here](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved [here](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved [here](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved [here](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 ## Submitted for Review
 
 You are required to submit the following:
@@ -57,3 +87,13 @@ You are required to submit the following:
 * the URL to the deployed application
 
 * the URL to the Github repository
+
+
+## Questions
+
+[GitHub Profile](https://github.com/rdevans87)
+
+
+## License
+
+[MIT LICENSE](LICENSE)

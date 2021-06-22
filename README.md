@@ -40,6 +40,8 @@ The user is be able to:
 
 `npx i create-react-app.js`
 
+`npm i axios` to make call with API
+
 `npm start` 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
@@ -56,7 +58,11 @@ Builds the app for production to the build folder.
 
 
 
+
+
 ## Resources 
+
+
 
 
 [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

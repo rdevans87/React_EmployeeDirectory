@@ -10,6 +10,8 @@ Using the [Random User API](https://randomuser.me/), when a user loads the page,
 
 This site is deployed on GitHub Pages using the `Create React App docs` for deployment.
 
+URL to deployed applicaton: [Employee Directory](/)
+
 GitHub Repository: [React_EmployeeDirectory](https://github.com/rdevans87/React_EmployeeDirectory)
 
 ## User Story

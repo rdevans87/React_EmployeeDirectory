@@ -6,20 +6,33 @@ import "./ResultsTable.css";
 
 export default class ResultsTable extends React.Component {
      
-   render () {
-      return 
-        <div>
-           <table className="table table-light mt-5">
-           <thead classname="thead-dark">
+   render() {
+      return (
+          <div>
+              <table className="table table-light mt-5">
+               <thead classname="thead-dark">
            <tr>
-           <th className="col"
+           <th className="col" id="profile-image">Profile</th>
+           <th className="col" 
+               key={employeeName}
+               onClick={() => {
+                  employeeName.handleSort();
+               }}>Name:<span>{employeeName}</span>
+               </th>           
            
-           key={name}
-           onClick=(name.handleSort())
+           
+           </th>
+
+
+
+            <th className=table-scope="col"
+             
+           key={employee}
+          
            
 
 
-
+      )
 
 
 

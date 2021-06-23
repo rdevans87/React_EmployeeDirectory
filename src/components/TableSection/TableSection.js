@@ -14,8 +14,9 @@ export default class DataSection extends React.Component {
     employees: [],
   };
 
-    handleSearchChange = (event) => {
-      const { employeeName, value } = event.value;
+    
+  handleSearchChange = (event) => {
+      const { employeeName, value } = event.name.value;
       this.setState(
         {
           [employeeName]: value
@@ -80,6 +81,25 @@ export default class DataSection extends React.Component {
 })
 
 ];
+
+
+handleFormSubmit = (event) => {
+  event.preventDefault();
+  console.log("Name")
+
+  this.searchEmployee();
+
+}
+
+
+handleSort = (event) => {
+  function handleOnClick(event) {
+    event.preventDefault();
+    console.log('sorting');
+  }
+};
+
+
 
 
  

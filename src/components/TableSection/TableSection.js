@@ -15,9 +15,32 @@ export default class DataSection extends React.Component {
   };
 
     handleSearchChange = (event) => {
-      const filter = event.target.value.trim();
-      const filteredList = this.state.users.filter(item => {
-        
+      const { employeeName, value } = event.value;
+      this.setState(
+        {
+          [employeeName]: value
+       }
+    )   
+}
+
+      getEmployees = () => [
+        getEmployeeName()
+        .then((response) => {
+          console.log(response);
+          this.setState(
+            {
+
+            employees: response.data.results
+          }
+      )
+  })
+  .catch((error) => {
+      console.log(error)
+  })
+
+]
+
+
         componentDidMount() {
           API.getEmployees().then(results => {
             this.setState({
@@ -26,8 +49,16 @@ export default class DataSection extends React.Component {
             });
           
           });
-        }
-    }
+        };
+    };
+
+    searchEmployee = () => {
+      getEmployeeName()
+      .then((response) => {
+        console.log(response);
+
+        let filter = this,
+
 
  
 

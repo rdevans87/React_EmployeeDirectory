@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar/Navbar";
+import Search from "../Search/Search";
 import ResultsTable from "../ResultsTable/ResultsTable";
 import ResultsData from "../ResultsData/ResultsData";
 import API from "../../utils/API";
@@ -9,9 +10,9 @@ import "./TableSection.css";
 export default class DataSection extends Component {
   
   state = {
-    employees: [{}],
+    search: "name",
     order: "descending",
-    filteredEmployees: [{}]
+    filteredEmployees: []
 
   };
 

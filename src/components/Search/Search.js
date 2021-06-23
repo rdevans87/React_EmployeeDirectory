@@ -1,68 +1,29 @@
 import React from "react";
 import "../Search/Search.css";
 
-export default class Search extends React.Component {
-    render() {
+function Search(props) {
         return (
             <div>
-                <form onSubmit={this.props.handleSubmit}>
+                <form className="search" onSubmit={props.handleSubmit}>
+                    <div className="form-inline">
+                <label htmlFor="language">Employee Search:</label>
                     <input
                         name="search"
-                        value={this.props.search}
-                        onChange={this.props.handleInputChange}>
-                    </input>
-                    <button>
+                        value={props.search}
+                        onChange={props.handleInputChange}
+                        name="name"
+                        type="text"
+                        className="form-control"
+                        id="name"
+                        />
+                      <button className="btn-primary btn-outline-dark">
                         Search
                     </button>
+                    </div>
                 </form>
             </div>
-
         )
-
     };
-}
 
 
-  // When the component mounts, update the title to be Wikipedia Searcher
-// useEffect(() => {
-//     document.title = "Employee Search";
-
-
-// if (!search) {
-//     return;
-//   }
-
-//   API.searchTerms(search)
-//     .then(res => {
-//       if (res.data.length === 0) {
-//         throw new Error("No results found.");
-//       }
-//       if (res.data.status === "error") {
-//         throw new Error(res.data.message);
-
-
-
-
-// const handleInputChange = event => {
-//     setSearch(event.target.value);
-//   };
-
-//   const handleFormSubmit = event => {
-//     event.preventDefault();
-//   };
-//   return (
-//     <div>
-//       <Container style={{ minHeight: "100vh" }}>
-//         <h1 className="text-center">Search For Anything on Wikipedia</h1>
-//         <Alert type="danger" style={{ opacity: error ? 1 : 0, marginBottom: 10 }}>
-//           {error}
-//         </Alert>
-//         <SearchForm
-//           handleFormSubmit={handleFormSubmit}
-//           handleInputChange={handleInputChange}
-//           results={search}
-//         />
-//         <SearchResults title={title} url={url} />
-//       </Container>
-//     </div>
 export default Search;

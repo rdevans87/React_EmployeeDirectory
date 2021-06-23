@@ -23,6 +23,22 @@ export default class Search extends React.Component {
 }
 
 
+  // When the component mounts, update the title to be Wikipedia Searcher
+// useEffect(() => {
+//     document.title = "Employee Search";
+
+
+// if (!search) {
+//     return;
+//   }
+
+//   API.searchTerms(search)
+//     .then(res => {
+//       if (res.data.length === 0) {
+//         throw new Error("No results found.");
+//       }
+//       if (res.data.status === "error") {
+//         throw new Error(res.data.message);
 
 
 

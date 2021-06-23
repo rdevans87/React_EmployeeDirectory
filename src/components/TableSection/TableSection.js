@@ -52,7 +52,7 @@ export default class DataSection extends React.Component {
         };
     };
 
-    searchEmployee = () => {
+    searchEmployee = () => [
       getEmployeeName()
       .then((response) => {
         console.log(response);
@@ -67,9 +67,20 @@ export default class DataSection extends React.Component {
         });
 
 
-        this.setState({
+        this.setState(
+            {
+              employees: filteredList
+            }
 
-        })
+        );
+
+  })
+  .catch((error) => {
+    console.log(error)
+})
+
+];
+
 
  
 

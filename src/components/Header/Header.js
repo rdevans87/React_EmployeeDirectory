@@ -19,5 +19,3 @@ render() {
 };
 
 
-
-          export default Header;

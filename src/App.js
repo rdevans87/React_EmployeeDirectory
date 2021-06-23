@@ -1,8 +1,8 @@
 import React from "react";
-import Main from "./components/Main";
-import Header from "./components/Header";
-import Wrapper from "./components/Wrapper";
-// import Footer from "./components/Footer";
+import Main from "./components/Main/Main";
+import Header from "./components/Header/Header";
+import Wrapper from "./components/Wrapper/Wrapper";
+
 
 import "./App.css" 
 
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Main/>
       </Wrapper>
-      {/* <Footer /> */}
+    
     </div>
 
 

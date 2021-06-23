@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Navbar from "..Navbar/Navbar";
+import Navbar from "./Navbar";
 import ResultsTable from "../ResultsTable/ResultsTable";
-import ResultsData from "../ResultsData/ResultsData";
+import ResultsData from "./ResultsData";
 import API from "../../utils/API";
 import "./TableSection.css";
 

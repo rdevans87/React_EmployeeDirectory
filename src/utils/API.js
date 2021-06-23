@@ -7,7 +7,7 @@ getRandomUser: function(query){
     // query +
     // "&limit=1&format=json&origin=*"
     
-    );
 }
 
 };
+

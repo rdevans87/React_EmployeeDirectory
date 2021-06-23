@@ -1,13 +1,16 @@
 import React from "react";
 import Moment from "react-moment";
-import ResultsTable from "react";
+import ResultsTable from "../ResultsTable/ResultsTable"
 
-function ResultsData({ employees }) {
+export default class ResultsData extends React.Components {
+    
+    
+    render(){
     return(
         <div>
             <ResultsTable>
                 <tbody>
-                    {props.employees.map((employee) => (
+                    {this.props.employees.map((employee) => (
                         <tr>
                             <th className="row"></th>
                             <td>
@@ -29,6 +32,7 @@ function ResultsData({ employees }) {
         </div>
    );  
 
-};
+}
 
-export default ResultsData;
+}
+

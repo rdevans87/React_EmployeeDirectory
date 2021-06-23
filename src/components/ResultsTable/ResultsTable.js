@@ -1,11 +1,13 @@
 import React from "react";
-import ResultsData from "..ResultsData/ResultsData";
+import ResultsData from "../ResultsData/ResultsData";
+// import ResultsTable from "../ResultsTable/ResultsTable";
 // import DataSection from "..TableSection/TableSection";
 // import ResultsData from "../ResultsData/ResultsData";
 import "./ResultsTable.css";
 
+
 export default class ResultsTable extends React.Component {
-     
+
    render() {
       return (
           <div>
@@ -14,18 +16,18 @@ export default class ResultsTable extends React.Component {
            <tr>
            <th className="col" id="profile-image">Profile</th>
            <th className="col" 
-               key={employeeName}
-               onClick={() => {
-                  employeeName.handleSort();
-               }}>Name:<span>{employeeName}</span>
+               key={employee}
+               onClick={this.props.SortByName}
+                >
+                  Name
                </th>    
-               <th className="col">Phone:</th>
-                <th className="col">Email:</th> 
-                <th className="col">DOB:</th>     
+               <th className="col">Phone</th>
+                <th className="col">Email</th> 
+                <th className="col">DOB</th>     
             </tr>
            </thead>
            <tbody>
-               <ResultsData employees={employees} />
+               <ResultsData users={employee} />
             </tbody>
            </table>
        </div>

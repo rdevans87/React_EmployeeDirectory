@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar/Navbar";
 import ResultsTable from "../ResultsTable/ResultsTable";
-import ResultsData from "./ResultsData";
+import ResultsData from "../ResultsData/ResultsData";
 import API from "../../utils/API";
 import "./TableSection.css";
+
 
 export default class DataSection extends Component {
   

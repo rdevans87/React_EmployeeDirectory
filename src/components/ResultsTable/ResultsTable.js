@@ -1,5 +1,5 @@
 import React from "react";
-import ResultsTable from "..ResultsTable/ResultsTable";
+import ResultsData from "..ResultData/ResultsData";
 // import DataSection from "..TableSection/TableSection";
 // import ResultsData from "../ResultsData/ResultsData";
 import "./ResultsTable.css";
@@ -18,100 +18,22 @@ export default class ResultsTable extends React.Component {
                onClick={() => {
                   employeeName.handleSort();
                }}>Name:<span>{employeeName}</span>
-               </th>           
-           
-           
-           </th>
-
-
-
-            <th className=table-scope="col"
-             
-           key={employee}
-          
-           
-
-
-      )
-
-
-
+               </th>    
+               <th className="col">Phone:</th>
+                <th className="col">Email:</th> 
+                <th className="col">DOB:</th>     
+            </tr>
            </thead>
-               <th scope="col">Image</th>
-           
-           
-           </tr>
-           
-           </div>
-           
-           
-           
+               <ResultsData employees={employees} />
            </table>
-
+       </div>
    
-           
-         
-           
-           
-           
-           </thead>
-           
-           
-           
-           
-           </table>
-    )
+      );
+
+   };
 
 
-
- 
-
-
-
-    render() {
-        return (
-            <div>
-                <table className="table table-light">
-                    <thead className="thead-dark">
-                    <tr>
-                        <th scope="col"
-
-
-
-
-
-                    </tr>
-
-
-                    </thead>
-                        <tr>
-
-
-
-
-
-
-                </table>
-
-
-
-
-
-
-
-
-            </div>
-
-
-}
-
-
-
-
-
-
-
-)
+};
 
 
 

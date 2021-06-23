@@ -1,13 +1,10 @@
 import React from "react";
 import TableHeader from "..TableHeader/TableHeader";
 import TableSection from "..TableSection/TableSection";
-import TableData from "../TableData/TableData";
+import ResultsData from "../ResultsData/ResultsData";
 import "./ResultsTable.css";
 
-exports default class TableSection extends React.Component {
-
-
- render() {
+function ResultsTable ({tableHeader, tableSection, Employee, ResultsData})
     return (
         <div>
            <table className="table table-info mt-5">

@@ -3,7 +3,7 @@ import Header from "../Header/Header"
 import 
 import ResultsTable from "../ResultsTable/ResultsTable";
 import TableHeader from "../TableHeader/TableHeader";
-import TableData from "../TableData/TableData";
+import TableData from "../ResultsData/ResultsData";
 import API from "../../utils/API";  
 import "./TableSection.css";
 

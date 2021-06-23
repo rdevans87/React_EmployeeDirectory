@@ -1,5 +1,5 @@
 import React from "react";
-import ResultsData from "..ResultData/ResultsData";
+import ResultsData from "..ResultsData/ResultsData";
 // import DataSection from "..TableSection/TableSection";
 // import ResultsData from "../ResultsData/ResultsData";
 import "./ResultsTable.css";

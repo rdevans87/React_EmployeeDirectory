@@ -1,8 +1,8 @@
 
+function ResultsData({ user }) {
 
 
-
-function SearchResults(props) {
+function ResultsData(props) {
     return (
       <ul className="list-group search-results">
         <li className="list-group-item">

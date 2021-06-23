@@ -31,14 +31,68 @@ export default class TableSection extends Component {
         }
     )
 }     
-  employees: results.data.results,
-        filteredEmployees: results.data.results
+
+loadEmployees = () => [
+  getEmployeeName()
+    .then((response) => {
+      console.log(response);
+      this.setState(
+        {
+          employees: response.data.results
+        }
+      )
+   
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
+]
+
+
+searchEmployee = () => [
+  getEmployeeName()
+    .then((response) => {
+
+      console.log(response);
+
+      let filter = this.state.search;
+
+      let filteredList = response.data.results.filter(item => {
+        let values = Object.values(item.name.first)
+          .joinh("")
+          .toLowerCase();
+        return values.indexOf(filter.toLowerCase()) != -1;
       });
+      
+      this.setState(
+        {
+          employees: filteredList
+        }
 
-    });
-  };
-
+      )
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   
+];
+
+
+handleSort = (event) => {
+  event.preventDefault();
+  console.log("Name")
+
+  this.searchEmployee();
+
+};
+
+
+
+
+
+
+
 
 render(){
   return(
@@ -69,59 +123,7 @@ render(){
 
 
 
-loadEmployees = () => [
-  getEmployeeName()
-    .then((response) => {
-      console.log(response);
-      this.setState(
-        {
 
-          employees: response.data.results
-        }
-      )
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-
-]
-
-
-searchEmployee = () => [
-  getEmployeeName()
-    .then((response) => {
-
-      console.log(response);
-
-      let filter = this.state.search;
-
-      let filteredList = response.data.results.filter(item => {
-        let values = Object.values(item.name.first.last)
-          .joinh("")
-          .toLowerCase();
-        return values.indexOf(filter.toLowerCase()) != -1;
-      });
-      this.setState(
-        {
-          employees: filteredList
-        }
-
-      )
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-  
-];
-
-
-handleSort = (event) => {
-  event.preventDefault();
-  console.log("Name")
-
-  this.searchEmployee();
-
-};
 
 
 

@@ -1,84 +1,75 @@
-import React, {Component} from "react";
-import Header from "../Header/Header"
-
+import React, { Component } from "react";
+import Header from "../Header/Header";
+import Navbar from "..Navbar/Navbar";
 import ResultsTable from "../ResultsTable/ResultsTable";
 import TableHeader from "../TableHeader/TableHeader";
 import ResultsData from "../ResultsData/ResultsData";
-import API from "../../utils/API";  
+import API from "../../utils/API";
 import "./TableSection.css";
+import { render } from "@testing-library/react";
+import { renderIntoDocument } from "react-dom/test-utils";
 
 export default class DataSection extends React.Component {
 
   state = {
-    search: "Name",
+    search: "name",
     employees: [],
   };
 
-    
-  handleSearchChange = (event) => {
-      const { employeeName, value } = event.name.value;
+
+  componentDidMount() {
+    API.getEmployees().then(results => {
+      this.setState({
+        employees: results.data.results,
+        filteredEmployees: results.data.results
+      });
+
+    });
+  };
+};
+
+getEmployees = () => [
+  getEmployeeName()
+    .then((response) => {
+      console.log(response);
       this.setState(
         {
-          [employeeName]: value
-       }
-    )   
-}
 
-      getEmployees = () => [
-        getEmployeeName()
-        .then((response) => {
-          console.log(response);
-          this.setState(
-            {
-
-            employees: response.data.results
-          }
+          employees: response.data.results
+        }
       )
-  })
-  .catch((error) => {
+    })
+    .catch((error) => {
       console.log(error)
-  })
+    })
 
 ]
 
 
-        componentDidMount() {
-          API.getEmployees().then(results => {
-            this.setState({
-            employees: results.data.results,
-            filteredEmployees: results.data.results
-            });
-          
-          });
-        };
-    };
+searchEmployee = () => [
+  getEmployeeName()
+    .then((response) => {
 
-    searchEmployee = () => [
-      getEmployeeName()
-      .then((response) => {
-        console.log(response);
+      console.log(response);
 
-        let filter = this.state.search;
-        let filteredList = response.data.result.filter(item => {
+      let filter = this.state.search;
 
-          let values = Object.values(item.name.first.last)
+      let filteredList = response.data.results.filter(item => {
+        let values = Object.values(item.name.first.last)
           .joinh("")
           .toLowerCase();
-          return values.indexOf(filter.toLowerCase()) != -1;
-        });
+        return values.indexOf(filter.toLowerCase()) != -1;
+      });
+      this.setState(
+        {
+          employees: filteredList
+        }
 
-
-        this.setState(
-            {
-              employees: filteredList
-            }
-
-        );
-
-  })
-  .catch((error) => {
-    console.log(error)
-})
+      )
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 
 ];
 
@@ -92,23 +83,29 @@ handleFormSubmit = (event) => {
 }
 
 
-handleSort = (event) => {
-  function handleOnClick(event) {
+handleSearchChange = (event) => {
+  function handleSearch(event) {
     event.preventDefault();
     console.log('sorting');
   }
-};
+}
 
+render()
+return (
 
+    <Navbar handleSearchChange={this.handleSearchChange} />
+    <div className="wrapper">
+      <Search
+        search={this.state.search}
+        handleInputChange={this.handleInputChange}
+        handleSubmit={this.handleInputSubmit}
+      />
+      <TableSection>
+        <ResultsTable handleSort={employeeName.results.handleSort} />
+        <ResultsData employees={this.state.employees}
+        />
+      </div>
 
-
- 
-
-
-
-
-
-export default TableSection;
 
 
 

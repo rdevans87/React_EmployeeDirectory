@@ -10,7 +10,7 @@ export default class ResultsTable extends React.Component {
       return (
           <div>
               <table className="table table-light mt-5">
-               <thead classname="thead-dark">
+               <thead className="thead-dark">
            <tr>
            <th className="col" id="profile-image">Profile</th>
            <th className="col" 
@@ -24,7 +24,9 @@ export default class ResultsTable extends React.Component {
                 <th className="col">DOB:</th>     
             </tr>
            </thead>
+           <tbody>
                <ResultsData employees={employees} />
+            </tbody>
            </table>
        </div>
    

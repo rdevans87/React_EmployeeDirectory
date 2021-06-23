@@ -7,7 +7,7 @@ import API from "../../utils/API";
 import "./TableSection.css";
 
 
-export default class DataSection extends Component {
+export default class TableSection extends Component {
   
   state = {
     search: "name",
@@ -17,10 +17,21 @@ export default class DataSection extends Component {
   };
 
 
-  componentDidMount() {
-    API.getEmployees().then(results => {
-      this.setState({
-        employees: results.data.results,
+  componentDidMount = () => {
+    this.loadEmployees();
+  }
+
+    handleInputChange = (event) => {
+      const { name, value } = event.target;
+      this.setState(
+        {
+
+          [name]: value
+
+        }
+    )
+}     
+  employees: results.data.results,
         filteredEmployees: results.data.results
       });
 
@@ -58,7 +69,7 @@ render(){
 
 
 
-getEmployees = () => [
+loadEmployees = () => [
   getEmployeeName()
     .then((response) => {
       console.log(response);

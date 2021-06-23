@@ -1,14 +1,41 @@
-import React, { Component } from "react";
-import TableHeader from "..TableHeader/TableHeader";
-import DataSection from "..TableSection/TableSection";
-import ResultsData from "../ResultsData/ResultsData";
+import React from "react";
+import ResultsTable from "..ResultsTable/ResultsTable";
+// import DataSection from "..TableSection/TableSection";
+// import ResultsData from "../ResultsData/ResultsData";
 import "./ResultsTable.css";
 
-function ResultsTable ({tableHeader, tableSection, Employee, ResultsData})
-    return (
+export default class ResultsTable extends React.Component {
+     
+   render () {
+      return 
         <div>
-           <table className="table table-info mt-5">
-           <thead classname="table table-striped table-hover  thead-light">
+           <table className="table table-light mt-5">
+           <thead classname="thead-dark">
+           <tr>
+           <th className="col"
+           
+           key={name}
+           onClick=(name.handleSort())
+           
+
+
+
+
+
+
+           </thead>
+               <th scope="col">Image</th>
+           
+           
+           </tr>
+           
+           </div>
+           
+           
+           
+           </table>
+
+   
            
          
            
@@ -20,13 +47,13 @@ function ResultsTable ({tableHeader, tableSection, Employee, ResultsData})
            
            
            </table>
- }
+    )
 
 
 
  
 
-export default class TableHeader extends React {
+
 
     render() {
         return (

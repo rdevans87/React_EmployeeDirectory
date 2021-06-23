@@ -1,10 +1,10 @@
 import React from "react";
 import React from "./components/Main";
-import Header from "./components/Wrapper";
-import Wrapper from "./components/Header";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
-import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 
 import "./App.css" 
 
@@ -12,11 +12,12 @@ function App() {
   document.title = "Employee Directory"
   return (
     <div className = "App">
-      <
+     
       <Wrapper>
-      <Header/>
+      <Header />
       <Main/>
       </Wrapper>
+      <Footer />
     </div>
 
 

@@ -4,46 +4,33 @@ import ResultsTable from "react";
 
 function ResultsData({ employees}) {
     return(
-        <div>
-         
-         <table className="table table-light mt-5">
-            <thead className="thead-dark">
-                <ResultsTable>
-            </thead>
+       <div>
+        <ResultsTable>
             <tbody>
-                
+             {props.employees.map((employee) => (
+              <tr>
+                  <th className="row"></th>
+
+                                <td>
+                                    <img
+                                        src={employee.picture.medium}
+                                        alt='employee'
+                                    />
+                                </td>
 
 
-
-            </tbody>
-        </table>
-     
-            <tbody>
-
-                
-                 {
-
-            }
-
+                                <td>{employee.name.first} {employee.name.last}</td>
+                                <td>{employee.phone}</td>
+                                <td>{employee.email}</td>
+                                <Moment format="MM/DD/YYYY">
+                                    <td>{employee.dob.date}</td>
+                                </Moment>
+                            </tr>
+              
+                        ))}
 
 
-
-
-
-
-
-
-
-                   </tr>
-
-
-
-
-    </div>
-
-
-
-
+                    </div>
 
   }
 

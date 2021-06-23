@@ -12,7 +12,7 @@ This application was bootstrapped with `Create-React-App` and is deployed on Git
 
 [React Employee Directory GH-Pages](/)
 
-[Employee Directory Repo](/)
+[React Employee Directory Repo](/)
 
 ## Table of Contents
 * [User Story](#user-story)
@@ -75,11 +75,9 @@ Builds the app for production to the build folder.
 
 ## Deployment
 
-This application is deployed on `GitHub Pages` using the `Create React App` docs for deployment.
+`gh-pages` branch used to host deployed application:[Employee Directory](/)
 
-URL to deployed applicaton: [Employee Directory](/)
-
-GitHub Repository: [React_EmployeeDirectory](https://github.com/rdevans87/React_EmployeeDirectory)
+`main` codebase pushed to Github: [react-employee-directory-main](https://github.com/rdevans87/React_EmployeeDirectory))
 
 
 ## Acceptance Criteria
@@ -96,17 +94,7 @@ The user is be able to:
   
   * `gh-pages` branch used to host the deployed application's code. 
 
-  
-
-
-
-
-
-
 ## Resources 
-
-
-
 
 [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 

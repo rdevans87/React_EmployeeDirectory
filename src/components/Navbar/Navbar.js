@@ -6,8 +6,8 @@ import "../Navbar/Navbar.css";
 
 function Navbar({ handleSearchChange }) {
   return (
-    <nav className="navbar navbar-fixed-top navbar bg-dark">
-      <div className="navbar navbar-row">
+    <nav className="navbar navbar-expand-lg navbar bg-dark">
+      <div className="navbar navbar-brand">
       <Search handleSearchChange={handleSearchChange} />
     </div>
     </nav>

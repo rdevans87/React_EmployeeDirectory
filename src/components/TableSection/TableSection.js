@@ -57,8 +57,19 @@ export default class DataSection extends React.Component {
       .then((response) => {
         console.log(response);
 
-        let filter = this,
+        let filter = this.state.search;
+        let filteredList = response.data.result.filter(item => {
 
+          let values = Object.values(item.name.first.last)
+          .joinh("")
+          .toLowerCase();
+          return values.indexOf(filter.toLowerCase()) != -1;
+        });
+
+
+        this.setState({
+
+        })
 
  
 

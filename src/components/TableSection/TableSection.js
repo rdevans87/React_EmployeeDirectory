@@ -1,8 +1,6 @@
-function ResultsData()
-
-
-import React from "react";
+import React, {Component} from "react";
 import Header from "../Header/Header"
+
 import ResultsTable from "../ResultsTable/ResultsTable";
 import TableHeader from "../TableHeader/TableHeader";
 import ResultsData from "../ResultsData/ResultsData";
@@ -16,24 +14,22 @@ export default class DataSection extends React.Component {
     employees: [],
   };
 
-  componentDidMount() {
-    API.getEmployees().then(results => {
-      this.setState({
-      employees: results.data.results,
-      filteredEmployees: results.data.results
-      });
-    
-      handleSearchChange = (event) => {
-        const { employeeName, value} = event.target.value;
+    handleSearchChange = (event) => {
+      const filter = event.target.value.trim();
+      const filteredList = this.state.users.filter(item => {
         
+        componentDidMount() {
+          API.getEmployees().then(results => {
+            this.setState({
+            employees: results.data.results,
+            filteredEmployees: results.data.results
+            });
+          
+          });
+        }
+    }
 
 
-
-
-
-    });
-  }
-};
 
 export default TableSection;
 

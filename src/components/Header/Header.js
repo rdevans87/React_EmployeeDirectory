@@ -3,10 +3,11 @@ import "../styles/Header.css";
 
 // By importing the Header.css file, it is added to the DOM whenever this component loads
 
+export default class Header extends Component.
 function Header() {
   return (
     <header className="header">
-      <h1>Welcome</h1>
+      <h1>Employee Directory</h1>
     </header>
   );
 }

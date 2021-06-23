@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Navbar from "../Navbar/Navbar";
+import Header from "../Header/Header";
+// import Navbar from "../Navbar/Navbar";
 import Search from "../Search/Search";
 import ResultsTable from "../ResultsTable/ResultsTable";
 import ResultsData from "../ResultsData/ResultsData";
-import API from "../../utils/API";
+import getEmployeeName from "../../utils/API";
 import "./TableSection.css";
 
 
@@ -64,7 +65,7 @@ searchEmployee = () => [
           .toLowerCase();
         return values.indexOf(filter.toLowerCase()) != -1;
       });
-      
+
       this.setState(
         {
           employees: filteredList
@@ -79,7 +80,7 @@ searchEmployee = () => [
 ];
 
 
-handleSort = (event) => {
+handleInputSubmit = (event) => {
   event.preventDefault();
   console.log("Name")
 
@@ -87,19 +88,16 @@ handleSort = (event) => {
 
 };
 
+SortByName = (event) => {
+  function handleClick(event) {
+  event.preventDefault();
+  console.log("Listening!")
+  }
 
-
-
-
-
-
-
-render(){
   return(
- 
-<>
-  <Navbar handleSearchChange={this.handleSearchChange} />
-  <div className="table-section">
+      <div className="table-section" >
+        
+        <Header/>
 
     <Search
      search={this.state.search}
@@ -113,8 +111,7 @@ render(){
       <ResultsData
        employees={this.state.filteredEmployees}
       />
-    </div>
-    </>  
+   </div>
   
    ); 
   }

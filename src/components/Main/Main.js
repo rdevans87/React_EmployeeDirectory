@@ -1,2 +1,3 @@
 import React, { Component } from "react";
-import 
+import TableSection from "../../TableSection";
+import "../Main/Main.css"

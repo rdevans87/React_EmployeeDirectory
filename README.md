@@ -52,17 +52,16 @@ Refer to [Random User Generator API](https://randomuser.me/documentation#intro) 
 
 Fork or Clone Repository, then run the following commands:
 
-`npx i create-react-app.js`
+`npx i create-react-app.js` 
 
 `npm i axios` HTTP client for the browser and node.js
 
 
  ## Usage
 
-
 `npm start` 
 Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+Open `http://localhost:3000`to view it in the browser.
 
 `npm test`
 Launches the test runner in the interactive watch mode.
@@ -76,7 +75,7 @@ Builds the app for production to the build folder.
 
 ## Deployment
 
-This application was deployed on `GitHub Pages` using the `Create React App` docs for deployment.
+This application is deployed on `GitHub Pages` using the `Create React App` docs for deployment.
 
 URL to deployed applicaton: [Employee Directory](/)
 

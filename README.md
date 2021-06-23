@@ -54,7 +54,9 @@ Fork or Clone Repository, then run the following commands:
 
 `npx i create-react-app.js` 
 
-`npm i axios` HTTP client for the browser and node.js
+`npm i boostrap` css-framework.
+
+`npm i axios` HTTP client for the browser and node.js.
 
 
  ## Usage

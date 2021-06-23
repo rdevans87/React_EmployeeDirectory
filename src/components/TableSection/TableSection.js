@@ -1,15 +1,23 @@
 import React from "react";
-import ResultsTable from "../ResultsTable/ResultsTable"
-import "../TableSection/TableSection.css";
+import Header from "../Header/Header"
+import ResultsTable from "../ResultsTable/ResultsTable";
+import TableHeader from "../TableHeader/TableHeader";
+import TableData from "../TableData/TableData";
+import getEmployeeResults from "../../utils/API";  
+import "./TableSection.css";
 
 export default class TableSection extends React.Component {
 
-  return (
-    <div>
-    <div className="table-section">
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
-    </div>
-    </div>
+  state = {
+    search: "name",
+    employee: []
+  };
+
+}
+
+
+
+
 )
 
 };

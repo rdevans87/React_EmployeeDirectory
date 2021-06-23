@@ -130,5 +130,5 @@ const isLocalhost = Boolean(
     }
   }
   
-© 2021 GitHub, Inc.
+
 

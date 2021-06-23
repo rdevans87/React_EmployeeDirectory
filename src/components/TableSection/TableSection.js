@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import Header from "../Header/Header";
 import Navbar from "..Navbar/Navbar";
 import ResultsTable from "../ResultsTable/ResultsTable";
-import TableHeader from "../TableHeader/TableHeader";
 import ResultsData from "../ResultsData/ResultsData";
 import API from "../../utils/API";
 import "./TableSection.css";
-import { render } from "@testing-library/react";
-import { renderIntoDocument } from "react-dom/test-utils";
 
-export default class DataSection extends React.Component {
-
+export default class DataSection extends Component {
+  
   state = {
-    search: "name",
-    employees: [],
+    employees: [{}],
+    order: "descending",
+    filteredEmployees: [{}]
+
   };
 
 
@@ -26,7 +24,37 @@ export default class DataSection extends React.Component {
 
     });
   };
-};
+
+  
+
+render(){
+  return(
+ 
+<>
+  <Navbar handleSearchChange={this.handleSearchChange} />
+  <div className="table-section">
+
+    <Search
+     search={this.state.search}
+      handleInputChange={this.handleInputChange}
+      handleSubmit={this.handleInputSubmit}
+      />
+
+    <ResultsTable
+      cols={this.cols}
+       handleSort={this.handleSort} />
+      <ResultsData
+       employees={this.state.filteredEmployees}
+      />
+    </div>
+    </>  
+  
+   ); 
+  }
+}
+
+
+
 
 getEmployees = () => [
   getEmployeeName()
@@ -70,41 +98,17 @@ searchEmployee = () => [
     .catch((error) => {
       console.log(error)
     })
-
+  
 ];
 
 
-handleFormSubmit = (event) => {
+handleSort = (event) => {
   event.preventDefault();
   console.log("Name")
 
   this.searchEmployee();
 
-}
-
-
-handleSearchChange = (event) => {
-  function handleSearch(event) {
-    event.preventDefault();
-    console.log('sorting');
-  }
-}
-
-render()
-return (
-
-    <Navbar handleSearchChange={this.handleSearchChange} />
-    <div className="wrapper">
-      <Search
-        search={this.state.search}
-        handleInputChange={this.handleInputChange}
-        handleSubmit={this.handleInputSubmit}
-      />
-      <TableSection>
-        <ResultsTable handleSort={employeeName.results.handleSort} />
-        <ResultsData employees={this.state.employees}
-        />
-      </div>
+};
 
 
 

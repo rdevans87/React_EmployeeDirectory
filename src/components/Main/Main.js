@@ -6,9 +6,9 @@ import "../Main/Main.css"
 export default class Main extends Component {
 render(){
     return (
-    
+    <>
         <TableSection/>
-        
+    </>    
 
     );
 

@@ -8,6 +8,7 @@ import getEmployeeName from "../../utils/API";
 import "./TableSection.css";
 
 
+
 export default class TableSection extends Component {
   
   state = {
@@ -63,7 +64,7 @@ searchEmployee = () => [
         let values = Object.values(item.name.first)
           .joinh("")
           .toLowerCase();
-        return values.indexOf(filter.toLowerCase()) != -1;
+        return values.indexOf(filter.toLowerCase()) !== -1;
       });
 
       this.setState(
@@ -88,13 +89,19 @@ handleInputSubmit = (event) => {
 
 };
 
+
 SortByName = (event) => {
-  function handleClick(event) {
   event.preventDefault();
   console.log("Listening!")
-  }
+  this.setState({
+    employees: this.data.results,
+    filteredEmployees: this.data.results
+})
 
-  return(
+}
+ 
+render() {
+return(
       <div className="table-section" >
         
         <Header/>

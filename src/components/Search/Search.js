@@ -1,18 +1,19 @@
 import React from "react";
 import "../Search/Search.css";
 
-function Search(props) {
-        return (
+export default class Search extends React.Component {
+        
+    
+    render() {
+    return (
             <div>
-                <form className="search" onSubmit={props.handleSubmit}>
+                <form className="search" onSubmit={this.props.handleSubmit}>
                     <div className="form-inline">
-                <label htmlFor="language">Employee Search:</label>
+                <label htmlFor="getEmployeeName">Employee Search:</label>
                     <input
-                        name="search"
-                        value={props.search}
-                        onChange={props.handleInputChange}
-                        name="name"
-                        type="text"
+                        type="search"
+                        value={this.props.search}
+                        onChange={this.props.handleInputChange}
                         className="form-control"
                         id="name"
                         />
@@ -24,7 +25,4 @@ function Search(props) {
             </div>
         )
     };
-
-
-export default Search;
-
+};

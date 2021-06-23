@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DataSection from "../DataSection/DataSection";
+import TableSection from "../TableSection/TableSection";
 import "../Main/Main.css"
 
 
@@ -7,7 +7,7 @@ export default class Main extends Component {
 render(){
     return (
     
-        <DataSection/>
+        <TableSection/>
         
 
     );

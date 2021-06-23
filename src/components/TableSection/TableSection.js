@@ -12,8 +12,8 @@ import "./TableSection.css";
 export default class DataSection extends React.Component {
 
   state = {
-    search: "name",
-    employee: []
+    search: "Name",
+    employees: [],
   };
 
   componentDidMount() {
@@ -23,8 +23,21 @@ export default class DataSection extends React.Component {
       filteredEmployees: results.data.results
       });
     
+      handleSearchChange = (event) => {
+        const { employeeName, value} = event.target.value;
+        
+
+
+
+
+
     });
   }
+};
+
+export default TableSection;
+
+
 
 
 
@@ -83,6 +96,3 @@ export default class DataSection extends React.Component {
 
 
 
-};
-
-export default Section;

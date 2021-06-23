@@ -1,11 +1,12 @@
 import React from "react";
+import ResultsTable from "../ResultsTable/ResultsTable"
 import "../TableSection/TableSection.css";
 
-// By importing the Section.css file, it is added to the DOM whenever this component loads
-function () {
+export default class TableSection extends React.Component {
+
   return (
     <div>
-    <div className="tableSection">
+    <div className="table-section">
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
     </div>
     </div>

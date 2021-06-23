@@ -15,11 +15,9 @@ export default class ResultsTable extends React.Component {
                <thead classame="thead-dark">
            <tr>
            <th className="col" id="profile-image">Profile</th>
-           <th className="col" 
-               key={employee}
-               onClick={this.props.SortByName}
-                >
-                  Name
+           <th className="col"
+               onClick={this.props.SortByName}> 
+               Name
                </th>    
                <th className="col">Phone</th>
                 <th className="col">Email</th> 
@@ -27,7 +25,7 @@ export default class ResultsTable extends React.Component {
             </tr>
            </thead>
            <tbody>
-               <ResultsData users={employee} />
+    
             </tbody>
            </table>
        </div>

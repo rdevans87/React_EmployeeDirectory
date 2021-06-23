@@ -1,6 +1,9 @@
-# Unit 19 React Homework: Employee Directory
+# React_EmployeeDirectory
 
 ## Overview
+
+
+Unit 19 React Homework: Employee Directory
 
 For this assignment, I've created an employee directory with React by breaking the application's UI into separate components to manage component state, and respond to user events. 
 

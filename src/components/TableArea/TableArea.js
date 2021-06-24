@@ -12,8 +12,9 @@ import "./TableArea.css";
 export default class TableArea extends React.Component {
 
   state = {
-    search: "names",
-    employees: []
+    employees: [{}],
+    order: "descend",
+    filteredEmployees: []
 
   }
 

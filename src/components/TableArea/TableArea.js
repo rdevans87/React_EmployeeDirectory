@@ -2,8 +2,8 @@
 import React from "react";
 import Header from "../Header/Header";
 import SearchBar from "../SearchBar/SearchBar";
-import ResultsTable from "../TableResults/TableResults";
-import ResultsData from "../TableData/TableData";
+import TableResults from "../TableResults/TableResults";
+import TableData from "../TableData/TableData";
 import getEmployeeName from "../../utils/API";
 import "./TableSection.css";
 
@@ -117,12 +117,16 @@ export default class TableArea extends React.Component {
           handleInputChange={this.handleInputChange}
           handleSubmit={this.handleInputSubmit}
         />
+        
+        <TableHeader 
+        SortByName={this.SortByName} /> 
+        <TableResults 
+        names={this.state.employees}
+          
+       />
 
-        <TableHeader SortByName={this.SortByName} />
-        <TableData
-          names={this.state.employees}
-        />
 
+      
       </div>
 
     )

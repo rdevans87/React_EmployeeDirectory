@@ -1,5 +1,6 @@
 import React from 'react';
-import TableArea from './components/TableArea';
+
+import TableArea from './components/TableArea/TableArea';
 
 
 

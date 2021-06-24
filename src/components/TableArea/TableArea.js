@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Header from "../Header/Header";
 import SearchBar from '../SearchBar/SearchBar';
 import TableData from '../TableData/TableData';
 import TableHeader from '../TableHeader/TableHeader';
@@ -11,8 +11,10 @@ export default class TableArea extends React.Component {
 
 
     state = {
-        search: "",
-        employees: []
+      search: "name",
+      employees: [],
+
+
     };
     // last search is staying on page
     componentDidMount = () => {
@@ -53,21 +55,17 @@ export default class TableArea extends React.Component {
 
                 console.log(response);
 
-                let filter = this.state.search;
+                const filter = this.state.search;
 
-                let filteredList = response.data.results.filter(item => {
-                    // merge data together, then see if user input is anywhere inside  
+                const filteredList = response.data.results.filter(item => {
+                   
                     let values = Object.values(item.name.first)
                         .join("")
                         .toLowerCase();
                     return values.indexOf(filter.toLowerCase()) !== -1;
                 });
-
-                this.setState(
-                    {
-                        employees: filteredList
-                    }
-                )
+                  this.setState({
+                        filteredEmployees: filteredList})
 
             })
             .catch((err) => {
@@ -80,50 +78,30 @@ export default class TableArea extends React.Component {
 
     handleInputSubmit = (event) => {
         event.preventDefault();
-        console.log("stuff");
-        // const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
-
-        // const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
+        console.log("handled submit");
+     
 
         this.searchEmployee();
 
     }
 
-    // Last thing to do
-    SortByName = (e) => {
-        function handleClick(e) {
-            e.preventDefault();
-            console.log('The link was clicked!');
-        }
-    }
-
-    // const handleSort = (parameter) => {
-    //     (order === 'asc') ? setOrder('desc') : setOrder('asc')
-    //     const newSortedList = listUtils.sortList(employees, parameter, order)
-    //     setEmployees(newSortedList)
-    //   }
-
-
-
-    // Key?
-
+ 
     render() {
         return (
             <div className="wrapper" >
-
+            
                 <Header />
-
                 <SearchBar
                     search={this.state.search}
                     handleInputChange={this.handleInputChange}
                     handleSubmit={this.handleInputSubmit}
                 />
-
-                <TableHeader SortByName={this.SortByName} />
+               
+                <TableHeader />
                 <TableData
                     employees={this.state.employees}
                 />
-
+        
             </div>
         );
     }

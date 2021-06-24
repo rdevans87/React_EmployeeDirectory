@@ -1,5 +1,4 @@
 import React from "react";
-// import TableData from "../TableData/TableData";
 import "./TableHeader.css";
 
 
@@ -16,21 +15,13 @@ export default class TableHeader extends React.Component {
                         <th scope="col">Image</th>
 
 
-                        <th scope="col"
-
-                            handleClick={this.props.SortByName}
-                        >
-                            Name
-
-                         </th>
-
-                        {/* <th scope="col">Name</th> */}
+                        <th scope="col">Name</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
                         <th scope="col">DOB</th>
                     </tr>
                 </thead>
-
+               
             </table>
         </div>
     )

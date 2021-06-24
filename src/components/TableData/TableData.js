@@ -6,7 +6,7 @@ import "../TableData/TableData.css";
 function TableData({ employee }) {
 
     return (
-      <tbody>
+      <div>
       {employee !== undefined && employee[0].name !== undefined ? (
         employee.map(({ login, name, picture, phone, email, dob }) => {
           return (
@@ -38,7 +38,7 @@ function TableData({ employee }) {
       ) : (
         <></>
       )}
-    </tbody>
+    </div>
   );
 }
 

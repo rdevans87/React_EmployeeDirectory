@@ -14,7 +14,7 @@ export default class TableArea extends React.Component {
   state = {
     employees: [{}],
     order: "descend",
-    filteredEmployees: []
+    filteredEmployees: [{}]
 
   }
 
@@ -85,9 +85,9 @@ export default class TableArea extends React.Component {
     event.preventDefault();
     console.log()
     
-    // const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
+  //   const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
 
-    // const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
+  //  const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
     
     this.searchEmployee();
 
@@ -95,11 +95,11 @@ export default class TableArea extends React.Component {
 
 
 
-//   SortByName = (e) => {
-//     function handleClick(e) {
-//     e.preventDefault();
-//     console.log("SortByName")
-//   }
+  // SortByName = (e) => {
+  //   function handleClick(e) {
+  //   e.preventDefault();
+  //   console.log("SortByName")
+  // }
 
 // }
 

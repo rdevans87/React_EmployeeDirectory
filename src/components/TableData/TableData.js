@@ -2,7 +2,7 @@ import React from "react";
 import "./ResultData/ResultsData.css"
 
 
-function ResultsData({names})  {
+function TableData{names})  {
     
         return(turn (
             <tbody>
@@ -40,5 +40,6 @@ function ResultsData({names})  {
             </tbody>
           );
         }
-export default 
+        
+export default TableData;
 

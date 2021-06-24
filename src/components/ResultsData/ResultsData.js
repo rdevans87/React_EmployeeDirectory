@@ -1,19 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import Moment from "react-moment";
-import ResultsTable from "../ResultsTable/ResultsTable";
-// import "../ResultsData/ResultsData.css";
 
-export default class ResultsData extends React.Components {
+export default class ResultData extends Component {
     
     
     render(){
     return(
         <div>
-            <ResultsTable>
+             <table className="table table-light mt-5">
+               
                 <tbody>
                     {this.props.employees.map((employee) => (
                         <tr>
-                            <th className="row"></th>
+                            <th scope="row"></th>
                             <td>
                             <img
                                 src={employee.picture.medium}
@@ -28,12 +27,13 @@ export default class ResultsData extends React.Components {
                         </tr>
                     ))}
 
-                </tbody>
-            </ResultsTable>
-        </div>
-   );  
+             
+            </tbody>
+        </table>
+     </div>
+   ) 
 
-}
+  }
 
 }
 

@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+
+import React from "react";
 import Header from "../Header/Header";
-// import Navbar from "../Navbar/Navbar";
+// import Main from "../Main/Main";
 import Search from "../Search/Search";
 import ResultsTable from "../ResultsTable/ResultsTable";
 import ResultsData from "../ResultsData/ResultsData";
@@ -9,13 +10,11 @@ import "./TableSection.css";
 
 
 
-export default class TableSection extends Component {
+export default class TableSection extends React.Component {
   
   state = {
     search: "name",
-    order: "descending",
-    filteredEmployees: []
-
+    employees: []
   };
 
 

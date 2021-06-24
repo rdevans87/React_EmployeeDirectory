@@ -1,11 +1,10 @@
 
 import React from "react";
 import Header from "../Header/Header";
-// import Main from "../Main/Main";
-import Search from "../SearchBar/Search";
+import SearchBar from "../SearchBar/SearchBar";
 import ResultsTable from "../TableResults/TableResults";
 import ResultsData from "../TableData/TableData";
-import getName from "../../utils/API";
+import getEmployeeName from "../../utils/API";
 import "./TableSection.css";
 
 

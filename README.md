@@ -10,11 +10,11 @@ Using the [Random User API](https://randomuser.me/), when a user loads the page,
 
 This application was bootstrapped with `Create-React-App` and is deployed on GitHub Pages:
 
-Application Deployed on gh-pages:[React Employee Directory](https://rdevans87.github.io/react-employee-directory/)
+Application Deployed on gh-pages:[ React Employee Directory](https://rdevans87.github.io/react-employee-directory/)
 
 [React Employee Directory GH-Pages](/)
 
-[React Employee Directory Repo](/)
+[React Employee Directory Repo](https://github.com/rdevans87/react-employee-directory)
 
 ## Table of Contents
 * [User Story](#user-story)
@@ -80,6 +80,8 @@ Builds the app for production to the build folder.
  This command will remove the single build dependency from your project.  
 
 ## Deployment
+
+Application Deployed on gh-pages:[ React Employee Directory](https://rdevans87.github.io/react-employee-directory/)
 
 `gh-pages` branch used to host deployed application:[Employee Directory](/)
 

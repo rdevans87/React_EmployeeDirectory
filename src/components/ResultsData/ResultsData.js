@@ -1,22 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import Moment from "react-moment";
 
-export default class ResultData extends Component {
+export default class ResultData extends React.Component {
     
     
     render(){
     return(
         <div>
-             <table className="table table-light mt-5">
-               
-                <tbody>
-                    {this.props.employees.map((employee) => (
-                        <tr>
-                            <th scope="row"></th>
-                            <td>
+             <table className="table-light">
+               <thead className="thead-dark">
+        <tr>
+                            <th scope="col">Profile</th>
+                            <th scope="col"
                             <img
                                 src={employee.picture.medium}
-                                alt='employee' />
+                                alt='employee' 
+                                />
                             </td>
                             <td>{employee.name.first} {employee.name.last}</td>
                             <td>{employee.phone}</td>

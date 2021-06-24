@@ -11,31 +11,29 @@ export default class ResultsTable extends React.Component {
    render() {
       return (
           <div>
-              <table className="table table-light mt-5">
+              <table className="table-light">
                <thead classame="thead-dark">
            <tr>
-           <th className="col" id="profile-image">Profile</th>
-           <th className="col"
+           <th scope="col" id="profile-image">Profile</th>
+           <th scope="col"
                onClick={this.props.SortByName}> 
                Name
                </th>    
-               <th className="col">Phone</th>
-                <th className="col">Email</th> 
-                <th className="col">DOB</th>     
+               <th scope="col">Phone</th>
+                <th scope="col">Email</th> 
+                <th scope="col">DOB</th>     
             </tr>
            </thead>
-           <tbody>
-    
-            </tbody>
+           
            </table>
        </div>
    
-      );
+      )
 
-   };
+   }
 
 
-};
+}
 
 
 

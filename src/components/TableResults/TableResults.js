@@ -1,37 +1,38 @@
 import React from "react";
+import TableData from "../TableData/TableData";
+import "./TableResults.css";
 
-// import "./TableResults/TableResults.css";
+function TableResults({ headings, employees, handleSort }) {
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            {headings.map(({ name, width }) => {
+              return (
+                <th
+                  className="col"
+                  key={name}
+                  style={{ width }}
+                  onClick={() => {
+                    handleSort(name.toLowerCase());
+                  }}
+                >
+                  {name}
+                  <span className="pointer"></span>
+                </th>
+              );
+            })}
+          </tr>
+        </thead>
 
-
-export default class TableResults extends React.Component {
-
-    render() {
-        return (
-            <div>
-                <table className="table">
-                    <thead classame="thead-dark">
-                        <tr>
-                            <th scope="col" id="profile-image">Profile</th>
-                            <th scope="col"
-                                onClick={this.props.SortByName}>
-                                Name
-                            </th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">DOB</th>
-                        </tr>
-                    </thead>
-
-                </table>
-            </div>
-
-        )
-
-    }
-
-
+        <TableData employees={employees} />
+      </table>
+    </div>
+  );
 }
 
+export default TableResults;
 
 
 

@@ -30,7 +30,7 @@ function TableData({ employee }) {
                   </a>
               </td>
               <Moment format="MM/DD/YYYY">
-               <td>{employee.dob.date}</td>
+               <td>{name.dob.date}</td>
               </Moment>
             </tr>
           );

@@ -18,17 +18,28 @@ export default class TableArea extends React.Component {
 
   }
 
+  handleSort = headings => {
+    if (this.state.order === "descend") {
+      this.setState({
+        order: "ascend"
+      })
+    } else {
+      this.setState({
+        order: "descend"
+      })
+    }
+
 
   componentDidMount = () => {
     this.loadEmployees();
   }
 
   handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { employees, value } = event.target;
     this.setState(
       {
 
-        [name]: value
+        [employees]: value
 
       }
     )
@@ -94,21 +105,7 @@ export default class TableArea extends React.Component {
   }
 
 
-
-  // SortByName = (e) => {
-  //   function handleClick(e) {
-  //   e.preventDefault();
-  //   console.log("SortByName")
-  // }
-
-// }
-
-  //    const handleSort = (parameter) => {
-  //       (order === 'asc') ? setOrder('desc') : setOrder('asc')
-  //        const newSortedList = listUtils.sortList(employees, parameter, order)
-  //         setEmployees(newSortedList)  
-  // }
-
+  }
 
 
   render() {
@@ -118,17 +115,16 @@ export default class TableArea extends React.Component {
         <Header />
 
     
-
+ 
         <SearchBar
           search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleSubmit={this.handleInputSubmit}
         />
         
-        <TableResults
-        SortByName={this.SortByName} /> 
+        <TableResults SortByName={this.props.SortByName} /> 
         <TableData 
-        names={this.state.employees}
+        employees={this.state.filteredEmployees}
           
        />
 

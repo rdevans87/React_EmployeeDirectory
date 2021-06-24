@@ -1,13 +1,14 @@
 import React from "react";
+import Moment from 'react-moment';
 import "../TableData/TableData.css";
 
 
-function TableData({ users }) {
+function TableData({ employee }) {
 
     return (
       <tbody>
-      {users !== undefined && users[0].name !== undefined ? (
-        users.map(({ login, name, picture, phone, email, dob }) => {
+      {employee !== undefined && employee[0].name !== undefined ? (
+        employee.map(({ login, name, picture, phone, email, dob }) => {
           return (
             <tr key={login.uuid}>
               <td data-th="Image" className="align-middle">
@@ -28,9 +29,9 @@ function TableData({ users }) {
                   {email}      
                   </a>
               </td>
-              <td data-th="DOB" className="align-middle">
-                {(dob.date)}
-              </td>
+              <Moment format="MM/DD/YYYY">
+               <td>{employee.dob.date}</td>
+              </Moment>
             </tr>
           );
         })

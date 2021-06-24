@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import Search from "../Search/Search";
 import ResultsTable from "../ResultsTable/ResultsTable";
 import ResultsData from "../ResultsData/ResultsData";
-import getEmployeeName from "../../utils/API";
+import getName from "../../utils/API";
 import "./TableSection.css";
 
 
@@ -13,13 +13,15 @@ import "./TableSection.css";
 export default class TableSection extends React.Component {
   
   state = {
-    search: "name",
-    employees: []
-  };
+    search:"names",
+    order: "descend",
+    filteredNames: [{}]
+  
+  }
 
 
   componentDidMount = () => {
-    this.loadEmployees();
+    this.loadNames();
   }
 
     handleInputChange = (event) => {
@@ -33,26 +35,26 @@ export default class TableSection extends React.Component {
     )
 }     
 
-loadEmployees = () => [
-  getEmployeeName()
+loadNames = () => [
+  getName()
     .then((response) => {
       console.log(response);
       this.setState(
         {
-          employees: response.data.results
+          names: response.data.results
         }
       )
    
     })
-    .catch((error) => {
-      console.log(error)
+    .catch((err) => {
+      console.log(err)
     })
 
 ]
 
 
-searchEmployee = () => [
-  getEmployeeName()
+searchNames = () => [
+  getName()
     .then((response) => {
 
       console.log(response);
@@ -61,47 +63,46 @@ searchEmployee = () => [
 
       let filteredList = response.data.results.filter(item => {
         let values = Object.values(item.name.first)
-          .joinh("")
+          .join("")
           .toLowerCase();
         return values.indexOf(filter.toLowerCase()) !== -1;
       });
 
       this.setState(
         {
-          employees: filteredList
+          names: filteredList
         }
 
       )
     })
-    .catch((error) => {
-      console.log(error)
+    .catch((err) => {
+      console.log(err)
     })
   
-];
+]
 
 
 handleInputSubmit = (event) => {
   event.preventDefault();
   console.log("Name")
 
-  this.searchEmployee();
+  this.searchName();
 
 };
 
 
-SortByName = (event) => {
-  event.preventDefault();
-  console.log("Listening!")
-  this.setState({
-    employees: this.data.results,
-    filteredEmployees: this.data.results
-})
 
-}
+//   SortByName = (event) => {
+//   event.preventDefault();
+//   console.log("Listening!")
+
+// }
+
+
  
 render() {
 return(
-      <div className="table-section" >
+      <div className="wrapper" >
         
         <Header/>
 
@@ -111,33 +112,14 @@ return(
       handleSubmit={this.handleInputSubmit}
       />
 
-    <ResultsTable
-      cols={this.cols}
-       handleSort={this.handleSort} />
+    <ResultsTable SortByName={this.SortByName} />
       <ResultsData
-       employees={this.state.filteredEmployees}
+       names={this.state.employees}
       />
+  
    </div>
   
    ); 
-  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

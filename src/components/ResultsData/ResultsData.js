@@ -1,38 +1,46 @@
 import React from "react";
 import Moment from "react-moment";
+import ResultsTable  from "../ResultsTable/ResultsTable";
 
 export default class ResultData extends React.Component {
-    
-    
-    render(){
-    return(
-        <div>
-             <table className="table-light">
-               <thead className="thead-dark">
-        <tr>
-                            <th scope="col">Profile</th>
-                            <th scope="col"
-                            <img
-                                src={employee.picture.medium}
-                                alt='employee' 
-                                />
-                            </td>
-                            <td>{employee.name.first} {employee.name.last}</td>
-                            <td>{employee.phone}</td>
-                            <td>{employee.email}</td>
-                            <Moment format="MM/DD/YYYY">
-                                <td>{employee.dob.date}</td>
-                            </Moment>
-                        </tr>
-                    ))}
 
-             
-            </tbody>
-        </table>
-     </div>
-   ) 
 
-  }
+    render() {
+        return (
+            <div>
+                <ResultsTable>
+                <table className="table">
+
+                    <tbody>
+                        {this.pictures.map((name) => (
+
+                            < tr >
+                                <th scope="row"></th>
+
+                                <td>
+                                    <img
+                                        src={name.picture.medium} alt="Profile"
+                                    />
+                                </td>
+
+
+                                <td>{name.first} {name.last}</td>
+                                <td>{name.phone}</td>
+                                <td>{name.email}</td>
+                                <Moment format="MM/DD/YYYY">
+                                    <td>{name.dob.date}</td>
+                                </Moment>
+                            </tr>
+
+                        ))}
+                    </tbody>
+             </table>
+           </ResultsTable>
+            
+            </div>
+        )
+
+    }
 
 }
 

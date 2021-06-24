@@ -11,7 +11,7 @@ export default class ResultsTable extends React.Component {
    render() {
       return (
           <div>
-              <table className="table-light">
+              <table className="table">
                <thead classame="thead-dark">
            <tr>
            <th scope="col" id="profile-image">Profile</th>

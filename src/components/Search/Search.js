@@ -1,5 +1,5 @@
 import React from "react";
-import "../Search/Search.css";
+// import "../Search/Search.css";
 
 export default class Search extends React.Component {
         
@@ -7,9 +7,9 @@ export default class Search extends React.Component {
     render() {
     return (
             <div>
-                <form className="search" onSubmit={this.props.handleSubmit}>
+                <form onSubmit={this.props.handleSubmit}>
                     <div className="form-inline">
-                <label htmlFor="getEmployeeName">Employee Search:</label>
+                <label htmlFor="employee">Employee Search:</label>
                     <input
                         type="search"
                         value={this.props.search}

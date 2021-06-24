@@ -1,9 +1,12 @@
 import axios from "axios";
 
- // eslint-disable-next-line
-export default {
-  // Gets all users
-  getUsers: function() {
-    return axios.get("https://randomuser.me/api/?results=200&nat=us");
-  }
+
+// const APIKEY = "&apikey=trilogy";
+
+export default function getName(query) {
+   
+    const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
+    return axios.get(BASEURL);
+
+
 };

@@ -1,3 +1,19 @@
 .name-cell {
     text-transform: capitalize;
 }
+
+.tabledata .col {
+    cursor: pointer;
+  }
+  
+  .tabledata .col .pointer:after {
+    font-size: 80%;
+    content: "";
+    margin-right: 18px;
+  }
+  
+  .tabledata .col .pointer:hover:after {
+    font-size: 80%;
+    content: "🔻";
+    margin-right: 0;
+  }

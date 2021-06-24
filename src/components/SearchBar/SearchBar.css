@@ -8,3 +8,16 @@ form.search {
     margin-top: 10px;
   }
   
+
+  button {
+    border: 1px solid black;
+
+  }
+
+
+  button:hover{
+    background-color: #101D42;
+    color: #ffffff;
+
+
+  }

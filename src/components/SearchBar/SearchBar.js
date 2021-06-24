@@ -1,5 +1,5 @@
 import React from "react";
-// import "../Search/Search.css";
+import "./SearchBar.css";
 
 export default class SearchBar extends React.Component {
         

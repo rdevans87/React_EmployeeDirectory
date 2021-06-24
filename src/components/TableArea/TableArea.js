@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import TableResults from "../TableResults/TableResults";
 import TableData from "../TableData/TableData";
 import getEmployeeName from "../../utils/API";
-// import "./TableArea.css";
+import "./TableArea.css";
 
 
 
@@ -82,22 +82,25 @@ export default class TableArea extends React.Component {
 
   handleInputSubmit = (event) => {
     event.preventDefault();
-    console.log("Name")
+    console.log()
+    
     // const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
 
     // const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
-    this.searchName();
-
-  };
-
-
-
-  SortByName = (event) => {
-    event.preventDefault();
-    console.log("Listening!")
-
+    
+    this.searchEmployee();
 
   }
+
+
+
+//   SortByName = (e) => {
+//     function handleClick(e) {
+//     e.preventDefault();
+//     console.log("SortByName")
+//   }
+
+// }
 
   //    const handleSort = (parameter) => {
   //       (order === 'asc') ? setOrder('desc') : setOrder('asc')

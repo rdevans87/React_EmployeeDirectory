@@ -1,9 +1,10 @@
 form {
 
   margin-bottom: 3%;
-  padding: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 10px;
+  margin-left: 41%;
+  
+  
   }
   
   form.search button[type="submit"] {

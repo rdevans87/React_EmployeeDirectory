@@ -15,7 +15,7 @@ export default class TableData extends React.Component {
 
           <tbody>
             {this.props.employees.map((employee) => (
-              />
+         
               < tr >
                           <th scope="row"></th>
 
@@ -32,6 +32,20 @@ export default class TableData extends React.Component {
                                 <td>{employee.email}</td>
                                 <Moment format="MM/DD/YYYY">
                                     <td>{employee.dob.date}</td>
+                              </Moment>
+                            </tr>
+
+                        ))}
+
+
+                    </tbody>
+                </table>
+            </div >
+
+
+        )
+    }
+}
         
 export default TableData;
 

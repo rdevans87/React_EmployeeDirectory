@@ -1,7 +1,7 @@
 import React from "react";
 // import "../Search/Search.css";
 
-export default class Search extends React.Component {
+export default class SearchBar extends React.Component {
         
     
     render() {
@@ -18,7 +18,7 @@ export default class Search extends React.Component {
                         id="name"
                         />
                       <button className="btn-primary btn-outline-dark">
-                        Search
+                        SearchBar
                     </button>
                     </div>
                 </form>
@@ -26,3 +26,5 @@ export default class Search extends React.Component {
         )
     };
 };
+
+

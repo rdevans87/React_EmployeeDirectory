@@ -1,18 +1,18 @@
-import React from "react";
-import TableSection from "./components/TableSection/TableSection"; 
+import React from 'react';
+import TableArea from './components/TableArea';
+
+
 
 
 function App() {
-
   return (
-    <div>     
-       <TableSection>
-     
-     
-     
-     </TableSection>
-    </div>
+    <div>
 
+      <TableArea>
+
+
+      </TableArea>
+    </div>
 
   );
 }

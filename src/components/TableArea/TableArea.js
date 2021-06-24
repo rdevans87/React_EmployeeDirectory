@@ -2,7 +2,7 @@
 import React from "react";
 import Header from "../Header/Header";
 // import Main from "../Main/Main";
-import Search from "../Search/Search";
+import Search from "../SearchBar/Search";
 import ResultsTable from "../ResultsTable/ResultsTable";
 import ResultsData from "../ResultsData/ResultsData";
 import getName from "../../utils/API";
@@ -10,7 +10,7 @@ import "./TableSection.css";
 
 
 
-export default class TableSection extends React.Component {
+export default class TableArea extends React.Component {
   
   state = {
     search:"names",

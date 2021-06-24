@@ -39,6 +39,8 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Mock Up
 
+<img src="public/screenshot.png" width="620px">
+
 
 ## Installation
 

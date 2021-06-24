@@ -13,14 +13,13 @@ export default class TableArea extends React.Component {
   
   state = {
     search:"names",
-    order: "descend",
-    filteredNames: [{}]
+    employees: []
   
   }
 
 
   componentDidMount = () => {
-    this.loadNames();
+    this.loadEmployees();
   }
 
     handleInputChange = (event) => {
@@ -34,8 +33,8 @@ export default class TableArea extends React.Component {
     )
 }     
 
-loadNames = () => [
-  getName()
+loadEmployees = () => [
+  getEmployeeName()
     .then((response) => {
       console.log(response);
       this.setState(
@@ -52,8 +51,8 @@ loadNames = () => [
 ]
 
 
-searchNames = () => [
-  getName()
+searchEmployee = () => [
+  getEmployeeName()
     .then((response) => {
 
       console.log(response);
@@ -84,41 +83,48 @@ searchNames = () => [
 handleInputSubmit = (event) => {
   event.preventDefault();
   console.log("Name")
+// const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
 
+// const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
   this.searchName();
 
 };
 
 
 
-//   SortByName = (event) => {
-//   event.preventDefault();
-//   console.log("Listening!")
+  SortByName = (event) => {
+  event.preventDefault();
+  console.log("Listening!")
 
+
+  }
+
+//    const handleSort = (parameter) => {
+//       (order === 'asc') ? setOrder('desc') : setOrder('asc')
+//        const newSortedList = listUtils.sortList(employees, parameter, order)
+//         setEmployees(newSortedList)  
 // }
+  
 
 
- 
 render() {
 return(
       <div className="wrapper" >
         
         <Header/>
-
-    <Search
+     <SearchBar
      search={this.state.search}
       handleInputChange={this.handleInputChange}
       handleSubmit={this.handleInputSubmit}
       />
 
-    <ResultsTable SortByName={this.SortByName} />
-      <ResultsData
+    <TableHeader SortByName={this.SortByName} />
+      <TableData
        names={this.state.employees}
       />
   
    </div>
-  
-   ); 
-}
+
+)
 
 }

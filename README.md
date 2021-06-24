@@ -10,6 +10,8 @@ Using the [Random User API](https://randomuser.me/), when a user loads the page,
 
 This application was bootstrapped with `Create-React-App` and is deployed on GitHub Pages:
 
+Application Deployed on gh-pages:[React Employee Directory](https://rdevans87.github.io/react-employee-directory/)
+
 [React Employee Directory GH-Pages](/)
 
 [React Employee Directory Repo](/)

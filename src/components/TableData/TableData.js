@@ -1,45 +1,37 @@
-import React from "react";
-import "./ResultData/ResultsData.css"
+import React, { useReducer } from 'react';
+import Moment from 'react-moment';
 
 
-function TableData{names})  {
-    
-        return(turn (
-            <tbody>
-              {users[0] !== undefined && users[0].name !== undefined ? (
-                users.map(({ login, name, picture, phone, email, dob }) => {
-                  return (
-                    <tr key={login.uuid}>
-                      <td data-th="Image" className="align-middle">
-                        <img
-                          src={picture.medium}
-                          alt={"profile image for " + name.first + " " + name.last}
-                          className="img-responsive"
-                        />
-                      </td>
-                      <td data-th="Name" className="name-cell align-middle">
-                        {name.first} {name.last}
-                      </td>
-                      <td data-th="Phone" className="align-middle">
-                        {phone}
-                      </td>
-                      <td data-th="Email" className="align-middle">
-                        <a href={"mailto:" + email} target="__blank">
-                          {email}
-                        </a>
-                      </td>
-                      <td data-th="DOB" className="align-middle">
-                        {formatDate(dob.date)}
-                      </td>
-                    </tr>
-                  );
-                })
-              ) : (
-                <></>
-              )}
-            </tbody>
-          );
-        }
+
+export default class TableData extends React.Component {
+
+
+
+  render() {
+    return (
+      <div>
+
+        <table className="table">
+
+          <tbody>
+            {this.props.employees.map((employee) => (
+              />
+              < tr >
+                          <th scope="row"></th>
+
+                                <td>
+                                    <img
+                                        src={employee.picture.medium}
+                                        alt='employee'
+                                    />
+                                </td>
+
+
+                                <td>{employee.name.first} {employee.name.last}</td>
+                                <td>{employee.phone}</td>
+                                <td>{employee.email}</td>
+                                <Moment format="MM/DD/YYYY">
+                                    <td>{employee.dob.date}</td>
         
 export default TableData;
 

@@ -1,11 +1,7 @@
 import React, { useReducer } from 'react';
 import Moment from 'react-moment';
 
-
-
 export default class TableData extends React.Component {
-
-
 
   render() {
     return (
@@ -26,7 +22,6 @@ export default class TableData extends React.Component {
                                     />
                                 </td>
 
-
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
@@ -37,12 +32,9 @@ export default class TableData extends React.Component {
 
                         ))}
 
-
                     </tbody>
                 </table>
             </div >
-
-
         )
     }
 }

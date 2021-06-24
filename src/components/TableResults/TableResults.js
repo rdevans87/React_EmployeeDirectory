@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./TableResults/TableResults.css";
+// import "./TableResults/TableResults.css";
 
 
 export default class TableResults extends React.Component {

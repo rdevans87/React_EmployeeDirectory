@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import TableResults from "../TableResults/TableResults";
 import TableData from "../TableData/TableData";
 import getEmployeeName from "../../utils/API";
-import "./TableSection.css";
+// import "./TableArea.css";
 
 
 
@@ -109,27 +109,28 @@ export default class TableArea extends React.Component {
 
   render() {
     return (
-      <div className="wrapper" >
+    <div className="wrapper">
 
         <Header />
+
+    
+
         <SearchBar
           search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleSubmit={this.handleInputSubmit}
         />
         
-        <TableHeader 
+        <TableResults
         SortByName={this.SortByName} /> 
-        <TableResults 
+        <TableData 
         names={this.state.employees}
           
        />
 
-
-      
       </div>
 
-    )
+    );
 
   }
 

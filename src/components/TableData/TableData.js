@@ -1,16 +1,16 @@
-import React, { useReducer } from 'react';
-import Moment from 'react-moment';
-
+import React from "react";
+import "./TableData.css";
 export default class TableData extends React.Component {
 
   render() {
     return (
-      <div>
-
-        <table className="table">
-
-          <tbody>
-            {this.props.employees.map((employee) => (
+      tbody>
+      {users[0] !== undefined && users[0].name !== undefined ? (
+        users.map(({ login, name, picture, phone, email, dob }) => {
+          return (
+            <tr key={login.uuid}>
+              <td data-th="Image" className="align-middle">
+                <img
          
               < tr >
                           <th scope="row"></th>
@@ -39,5 +39,5 @@ export default class TableData extends React.Component {
     }
 }
         
-export default TableData;
+
 

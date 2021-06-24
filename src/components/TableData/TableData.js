@@ -1,11 +1,12 @@
 import React from "react";
-import "./TableData.css";
-export default class TableData extends React.Component {
+import "../TableData/TableData.css";
 
-  render() {
+
+function TableData({ users }) {
+
     return (
       <tbody>
-      {users[0] !== undefined && users[0].name !== undefined ? (
+      {users !== undefined && users[0].name !== undefined ? (
         users.map(({ login, name, picture, phone, email, dob }) => {
           return (
             <tr key={login.uuid}>
@@ -16,23 +17,28 @@ export default class TableData extends React.Component {
                 className="img-responsive"
               />
                 </td>    
-
-                                <td>{employee.name.first} {employee.name.last}</td>
-                                 <td>{employee.phone}</td>
-                                <td>{employee.email}</td>
-                                <Moment format="MM/DD/YYYY">
-                                    <td>{employee.dob.date}</td>
-                              </Moment>
-                            </tr>
-
-                        )}
-
-                    </tbody>
-                </table>
-            </div >
-        ) )
-    }
+                <td data-th="Name" className="name-cell align-middle">
+                {name.first} {name.last}
+              </td>
+              <td data-th="Phone" className="align-middle">
+                {phone}
+              </td>
+              <td data-th="Email" className="align-middle">
+                <a href={"mailto:" + email} target="__blank">
+                  {email}      
+                  </a>
+              </td>
+              <td data-th="DOB" className="align-middle">
+                {(dob.date)}
+              </td>
+            </tr>
+          );
+        })
+      ) : (
+        <></>
+      )}
+    </tbody>
+  );
 }
-        
 
-
+export default TableData;

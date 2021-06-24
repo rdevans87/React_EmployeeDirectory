@@ -1,6 +1,7 @@
 import React from "react";
 import Moment from "react-moment";
-import ResultsTable from "../ResultsTable/ResultsTable"
+import ResultsTable from "../ResultsTable/ResultsTable";
+// import "../ResultsData/ResultsData.css";
 
 export default class ResultsData extends React.Components {
     

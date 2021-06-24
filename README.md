@@ -12,7 +12,7 @@ This application was bootstrapped with `Create-React-App` and is deployed on Git
 
 Application Deployed on gh-pages:[ React Employee Directory](https://rdevans87.github.io/react-employee-directory/)
 
-[React Employee Directory GH-Pages](/)
+[React Employee Directory gh-pages Repo](https://github.com/rdevans87/react-employee-directory/blob/main/README.md)
 
 [React Employee Directory Repo](https://github.com/rdevans87/react-employee-directory)
 

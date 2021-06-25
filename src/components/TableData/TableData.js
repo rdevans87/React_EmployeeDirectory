@@ -14,11 +14,8 @@ export default class TableData extends React.Component {
 
                     <tbody>
 
-                        {/* Map Works */}
-                        {/* Moment works */}
-
                         {this.props.employees.map((employee) => (
-                            // Key 
+                          
                             < tr >
                                 <th scope="row"></th>
 

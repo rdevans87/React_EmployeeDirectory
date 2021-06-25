@@ -16,7 +16,7 @@ export default class TableArea extends React.Component {
 
 
     };
-    // last search is staying on page
+
     componentDidMount = () => {
         this.loadEmployees();
     }
@@ -36,7 +36,6 @@ export default class TableArea extends React.Component {
                 console.log(response);
                 this.setState(
                     {
-                        // API returns "results" 
                         employees: response.data.results
                     }
                 )
@@ -48,7 +47,7 @@ export default class TableArea extends React.Component {
     ]
 
 
-    // Working, but last search is not staying on page
+   
     searchEmployee = () => [
         getEmployeeName()
             .then((response) => {

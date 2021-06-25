@@ -140,3 +140,7 @@ You are required to submit the following:
 ## License
 
 [MIT LICENSE](LICENSE)
+
+
+ "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",

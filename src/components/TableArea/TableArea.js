@@ -7,15 +7,16 @@ import getEmployeeName from "../../utils/API";
 
 
 
+
 export default class TableArea extends React.Component {
 
 
     state = {
       search: "name",
       employees: [],
+      
+    }
 
-
-    };
 
     componentDidMount = () => {
         this.loadEmployees();
@@ -36,6 +37,7 @@ export default class TableArea extends React.Component {
                 console.log(response);
                 this.setState(
                     {
+                        // API returns "results" 
                         employees: response.data.results
                     }
                 )
@@ -47,7 +49,6 @@ export default class TableArea extends React.Component {
     ]
 
 
-   
     searchEmployee = () => [
         getEmployeeName()
             .then((response) => {
@@ -72,9 +73,7 @@ export default class TableArea extends React.Component {
             })
     ]
 
-
-
-
+       
     handleInputSubmit = (event) => {
         event.preventDefault();
         console.log("handled submit");
@@ -83,8 +82,25 @@ export default class TableArea extends React.Component {
         this.searchEmployee();
 
     }
+     
 
- 
+    
+    sortByName = () => [
+            getEmployeeName()
+                .then((response) => {
+                    console.log(response);
+                    this.setState(
+                        {
+                           employees: response.data.results
+                        }
+                    )
+    
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+            ]
+    
     render() {
         return (
             <div className="wrapper" >
@@ -95,8 +111,10 @@ export default class TableArea extends React.Component {
                     handleInputChange={this.handleInputChange}
                     handleSubmit={this.handleInputSubmit}
                 />
-               
-                <TableHeader />
+               <TableHeader
+
+                sortByName={this.sortByName}
+                />   
                 <TableData
                     employees={this.state.employees}
                 />

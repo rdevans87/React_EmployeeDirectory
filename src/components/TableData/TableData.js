@@ -1,6 +1,7 @@
 import React from "react";
 import Moment from 'react-moment';
 import "../TableData/TableData.css";
+
 export default class TableData extends React.Component {
 
 
@@ -10,8 +11,7 @@ export default class TableData extends React.Component {
             <div>
 
                 <table className="table">
-
-
+            
                     <tbody>
 
                         {this.props.employees.map((employee) => (
@@ -23,10 +23,9 @@ export default class TableData extends React.Component {
                                     <img
                                         src={employee.picture.medium}
                                         alt='employee'
+                                        
                                     />
                                 </td>
-
-
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
@@ -40,7 +39,7 @@ export default class TableData extends React.Component {
 
                     </tbody>
                 </table>
-            </div >
+            </div>
 
 
         )

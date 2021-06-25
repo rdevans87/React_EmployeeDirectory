@@ -1,16 +1,24 @@
+/* body{
+  text-align: center;
+} */
+
 
   .container {
     height: 50px;
+  
   }
   
   form {
-    margin-left: 50%;
+    margin-left: 2%;
     margin-bottom: 3%;
+    
   }
   
   .wrapper {
     margin-left: 5%;
     margin-right: 5%;
+   
+    
   
   }
  
